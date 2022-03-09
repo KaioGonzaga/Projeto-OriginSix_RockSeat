@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+
+/* =============== RESET ============== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* =========== VARIÁVEIS ============== */
+
+:root {
+    --fonte-padrao: 'DM Sans', sans-serif;
+    --fonte-destaque: 'Poppins', sans-serif;
+
+    --hue:159;
+    --cor-base: hsl(var(--hue) 36% 57%);
+    --cor-base-segunda: hsl(var(--hue) 65% 88%);
+    --cor-base-alt: hsl(var(--hue) 57% 53%);
+    --cor-titulo: hsl(var(--hue) 41% 10%);
+    --cor-texto: hsl(0 0% 46%);
+    --cor-texto-light: hsl(0 0% 98%);
+    --cor-corpo: hsl(0 0% 98%)
+ }
+
+/* =============== BASE ========== */
+
+body {
+    font-family: var(--fonte-padrao);
+    font-size: 1rem;
+    background-color: var(--cor-corpo);
+    color: var(--cor-texto);
+
+}
+
+h1 {
+    font-family: var(--fonte-destaque);
+    font-weight: bold;
+    font-size: 1.875rem;
+    color: var(--cor-titulo);
+}
+
+.button {
+
+}
+
+
+
+/* ============= LAYOUT ============== */
+
+#header {
+   border-bottom: 1px solid #e4e4e4;
+   margin-bottom: 2rem;
+}
+
+nav {
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    font: var(--fonte-destaque);
+    font-weight: bold;
+    font-size: 1.31rem;
+    color: var(--cor-titulo);
+}
+
+.logo span {
+    color: var(--cor-base);
+}
+
+.container {
+    width: 100%;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+
+/* ============ HOME ============ */
+
+#home .container {
+    margin: 0;
+}
+
+#home .image {
+    position: relative;
+}
+
+#home .image::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: var(--cor-base-segunda);
+    position: absolute;
+    top: -16.8%;
+    left: 16.7%;
+    z-index: 0;
+}
+
+#home .image img {
+    position: relative;
+    right: 2.93rem;
+}
+
+#home .image img, #home .image::before {
+    border-radius: 0.25rem;
+}
+
+#home .text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
