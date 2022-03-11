@@ -12,6 +12,10 @@
     box-sizing: border-box;
 }
 
+ul {
+    list-style: none;
+}
+
 a {
     text-decoration: none;
 }
@@ -47,7 +51,7 @@ body {
 
 }
 
-h1 {
+.title {
     font-family: var(--fonte-destaque);
     font-weight: bold;
     font-size: 1.875rem;
@@ -111,14 +115,11 @@ h1 {
    background-color: var(--cor-corpo);
 }
 
-nav {
-    height: 4.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+main {
+    margin-top: calc(4.5rem + 2rem);
 }
 
+/* ============= LOGO ============== */
 
 .logo {
     font: var(--fonte-destaque);
@@ -131,8 +132,74 @@ nav {
     color: var(--cor-base);
 }
 
-main {
-    margin-top: 4.5rem;
+/* =========== NAVIGATION ============= */
+
+nav {
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+nav ul li {
+    text-align: center;
+}
+
+nav ul li a {
+    transition: color 0.2s;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: var(--cor-base);
+}
+
+nav ul li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: var(--cor-base);
+
+    position: absolute;
+    left: 0;
+    bottom: -1.5rem;
+
+    transform: width 0.2s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav .menu {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Mostra Menu */
+nav.show .menu {
+    opacity: 1;
+    visibility: visible;
+
+    background: var(--cor-corpo);
+
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav.show .menu {
+    display: grid;
+    place-content: center;
+}
+
+nav.show ul.grid {
+    gap: 4rem;
 }
 
 
