@@ -31,7 +31,9 @@ img {
     --fonte-padrao: 'DM Sans', sans-serif;
     --fonte-destaque: 'Poppins', sans-serif;
 
+    /* colors */
     --hue:159;
+    /* HSL color mode */
     --cor-base: hsl(var(--hue) 36% 57%);
     --cor-base-segunda: hsl(var(--hue) 65% 88%);
     --cor-base-alt: hsl(var(--hue) 57% 53%);
@@ -202,6 +204,27 @@ nav.show ul.grid {
     gap: 4rem;
 }
 
+/*  toggle menu */
+
+.toggle {
+    color: var(--cor-base);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav .icon-close {
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    right: 1.5rem;
+    /* TRANSIÇÃO BACANA */
+}
+
+nav.show div.icon-close {
+    visibility: visible;
+    opacity: 1;
+}
 
 /* ============ HOME ============ */
 
