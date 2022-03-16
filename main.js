@@ -46,3 +46,20 @@ const swiper = new Swiper('.swiper-container', {
     keyboard: true
 
 });
+
+/* ScrollReveal Mostrar elementos quando de scroll na página */
+
+const scrollReveal = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 700,
+    reset: true
+})
+
+scrollReveal.reveal(
+    `#home .image, #home .text,
+    #about .image, #about .text,
+    #services header, #services .card,
+    #testimonials heder, #testimonials .testimonials,
+    #contact .text, #contact .links`,
+     {interval: 100})
