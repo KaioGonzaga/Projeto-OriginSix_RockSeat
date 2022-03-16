@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+   
     <title>OriginSix</title>
+
+     <!--  SWIPER  -->
+
+     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+     />
 
     <!--Fonts-->
     <link rel="stylesheet" href="asserts/fonts/style.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+
+   
     
 </head>
 <body>
@@ -30,6 +40,8 @@
     </header>
     
     <main>
+
+        <!-- HOME -->
         <section class="section" id="home">
             <div class="container grid">
                 <div class="image">
@@ -45,6 +57,7 @@
 
         <div class="divider-1"></div>
 
+        <!-- SOBRE -->
        <section class="section" id="about">
            <div class="container grid">
                <div class="image">
@@ -62,6 +75,8 @@
        </section>
 
        <div class="divider-2"></div>
+
+       <!-- SERVICES-->
 
        <section class="section" id="services">
            <div class="container grid">
@@ -88,7 +103,69 @@
                </div>
            </div>
        </section>
+
+       <div class="divider-1"></div>
+
+       <!-- TESTEMUNHAS -->
+
+        <section class="section" id="testimonials">
+            <div class="container swiper">
+                <header class="title">
+                    <h2>Depoimentos de quem ja passou por aqui</h2>
+                </header>
+                <div class="testimonials swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="testimonial swiper-slide">
+                            <blockquote>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta molestias illo reprehenderit facilis minus tempore provident, porro
+                                </p>
+                                <cite>
+                                    <img src="https://randomuser.me/api/portraits/women/19.jpg" alt="Foto de Wanessa Souza">
+                                    Wanessa Souza
+                                </cite>
+                            </blockquote>
+                        </div>
+                        <div class="testimonial swiper-slide">
+                            <blockquote>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta molestias illo reprehenderit facilis minus tempore provident, porro
+                                </p>
+                                <cite>
+                                    <img src="https://randomuser.me/api/portraits/women/9.jpg" alt="Foto de Franciele Veiga">
+                                    Franciele Venega
+                                </cite>
+                            </blockquote>
+                        </div>
+                        <div class="testimonial swiper-slide">
+                            <blockquote>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta molestias illo reprehenderit facilis minus tempore provident, porro
+                                </p>
+                                <cite>
+                                    <img src="https://randomuser.me/api/portraits/women/77.jpg" alt="Foto de Valeska Fabris">
+                                    Valeska Fabris
+                                </cite>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                         <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+       <!-- CONTATO -->
     </main>
+
+    <!-- SWIPPER -->
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- main.js-->
     <script src="main.js"></script>
 </body>
 </html>
