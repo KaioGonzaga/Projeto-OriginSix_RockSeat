@@ -63,3 +63,8 @@ scrollReveal.reveal(
     #testimonials heder, #testimonials .testimonials,
     #contact .text, #contact .links`,
      {interval: 100})
+
+
+
+/*  Botão voltar para o topo*/
+

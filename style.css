@@ -164,6 +164,10 @@ main {
     color: var(--cor-base);
 }
 
+.logo-alt span {
+    color: var(--cor-corpo);
+}
+
 /* =========== NAVIGATION ============= */
 
 nav {
@@ -484,3 +488,58 @@ nav.show div.icon-close {
 #contact ul li i {
     color: var(--cor-base);
 }
+
+/* =========== FOOTER =========== */
+
+footer {
+    background: var(--cor-base);
+}
+
+footer .logo {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+footer .brand p {
+    color: var(--cor-texto-light);
+    margin-bottom: 0.75rem;
+
+}
+
+footer i {
+    font-size: 1.5rem;
+    color: var(--cor-texto-light);
+}
+
+footer .social a{
+    margin-right: 2rem;
+}
+
+/* back-to-top */
+
+.back-to-top {
+    background: var(--cor-base);
+    color: var(--cor-texto-light);
+
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+
+    padding: 0.5rem;
+    clip-path: circle();
+
+    font-size: 1.5rem;
+    line-height: 0;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+.back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+
