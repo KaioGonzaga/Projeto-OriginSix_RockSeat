@@ -28,7 +28,7 @@ img {
 /* =========== VARIÁVEIS ============== */
 
 :root {
-    --header-height: 4.5rem
+    --header-height: 4.5rem;
 
     --fonte-padrao: 'DM Sans', sans-serif;
     --fonte-destaque: 'Poppins', sans-serif;
