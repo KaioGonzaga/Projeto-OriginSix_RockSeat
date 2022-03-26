@@ -24,7 +24,7 @@ for(const link of links) {
 const header = document.querySelector('#header')
 const navHeight = header.offsetHeight
 
-window.addEventListener('scroll', function() {
+function changeHeaderWhenScroll() {
     //scroll é maior que a altura do header
     if(window.scrollY >= navHeight) {
         header.classList.add('scroll')
@@ -33,7 +33,7 @@ window.addEventListener('scroll', function() {
         //menor que a altura do header
         header.classList.remove('scroll')
     }
-})
+}
 
 /* Testimonials caurousel slider swiper */
 
@@ -43,7 +43,13 @@ const swiper = new Swiper('.swiper-container', {
         el: '.swiper-pagination'
     },
     mousewhell: true,
-    keyboard: true
+    keyboard: true,
+    breakpoints: {
+        767: {
+            slidesPerView:2,
+            setWrapperSize: true
+        }
+    }
 
 });
 
@@ -70,11 +76,30 @@ scrollReveal.reveal(
 /*  Botão voltar para o topo*/
 
 const backToTopButton = document.querySelector('.back-to-top')
-window.addEventListener('scroll', function() {
+
+function backtop() {
     if(window.scrollY >=560) {
         backToTopButton.classList.add('show')
     } else {
         backToTopButton.classList.remove('show')
     }
-})
+}
 
+
+/* Menu ativo conforme a seção visível na página  */
+const sections = document.querySelectorAll('main section[id]')
+function activateMenuAtCurrentSection() {
+    
+    const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
+
+    
+}
+
+
+/* When Scroll */
+window.addEventListener('scroll', function () {
+    changeHeaderWhenScroll()
+    backToTop()
+    activateMenuAtCurrentSection()
+   
+  })
