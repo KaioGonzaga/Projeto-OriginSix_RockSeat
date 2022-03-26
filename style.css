@@ -195,7 +195,8 @@ nav ul li a {
     position: relative;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
     color: var(--cor-base);
 }
 
@@ -212,7 +213,8 @@ nav ul li a::after {
     transform: width 0.2s;
 }
 
-nav ul li a:hover::after {
+nav ul li a:hover::after,
+nav ul li a.active::after {
     width: 100%;
 }
 
@@ -607,6 +609,10 @@ footer .social a:hover{
 
     nav .menu ul li a.title {
         font: 400 1rem var(--fonte-padrao);
+    }
+
+    nav .menu ul li a.title.active {
+        font-weight: bold;
     }
 
     nav .icon-menu {
